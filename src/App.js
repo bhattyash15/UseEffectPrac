@@ -39,7 +39,7 @@ function App() {
     fetchCountries();
 
     
-  }, []);
+  },[]);
 
   return (
     <div className="App">
@@ -51,7 +51,7 @@ function App() {
               onChange={(e) => fetchCities(e.target.value)}
               value={singleCountry}
             >
-              <option selected hidden disabled>
+              <option selected hidden >
                 Select Country
               </option>
               {countries.map((country) => (
@@ -67,7 +67,7 @@ function App() {
               onChange={(e) => setSingleCity(e.target.value)}
               value={singleCity}
             >
-              <option disabled selected hidden>
+              <option selected hidden>
                 Select City
               </option>
               {cities.map((city) => (
